@@ -3,6 +3,7 @@ package com.rosygamingglassesmidtier.midtier.model;
 import javax.persistence.*;
 
 @Entity
+@Table
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
