@@ -30,12 +30,12 @@ public class AuthService {
     private JwtProvider jwtProvider;
 
     public void signup(RegisterRequest registerRequest){
-        Users users = new Users();
-        users.setUsername(registerRequest.getUsername());
-        users.setPassword(encodePassword(registerRequest.getPassword()));
-        users.setEmail(registerRequest.getEmail());
+        Users user = new Users();
+        user.setUsername(registerRequest.getUsername());
+        user.setPassword(encodePassword(registerRequest.getPassword()));
+        user.setEmail(registerRequest.getEmail());
 
-        usersRepository.save(users);
+        usersRepository.save(user);
     }
 
     private String encodePassword(String password){
