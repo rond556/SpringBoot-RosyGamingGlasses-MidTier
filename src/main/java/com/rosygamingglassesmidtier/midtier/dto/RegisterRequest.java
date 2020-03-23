@@ -1,4 +1,4 @@
-package dto;
+package com.rosygamingglassesmidtier.midtier.dto;
 
 public class RegisterRequest {
 
