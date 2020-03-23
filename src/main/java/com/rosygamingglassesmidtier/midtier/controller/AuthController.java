@@ -1,5 +1,6 @@
 package com.rosygamingglassesmidtier.midtier.controller;
 
+import com.rosygamingglassesmidtier.midtier.dto.LoginRequest;
 import com.rosygamingglassesmidtier.midtier.service.AuthService;
 import com.rosygamingglassesmidtier.midtier.dto.RegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,11 @@ public class AuthController {
     public ResponseEntity signup(@RequestBody RegisterRequest registerRequest){
         authService.signup(registerRequest);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public void login(@RequestBody LoginRequest loginRequest){
+        authService.login(loginRequest);
     }
 
 }
