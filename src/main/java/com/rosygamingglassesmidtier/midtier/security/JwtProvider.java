@@ -38,7 +38,7 @@ public class JwtProvider {
 
     private Key getPrivateKey() throws Exception {
         try {
-            return (PrivateKey) keyStore.getKey("seenIt", "password".toCharArray());
+            return (PrivateKey) keyStore.getKey("rosygamingglasses", "password".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
             throw new Exception("Exception occurred while retrieving private key from keystore");
         }
